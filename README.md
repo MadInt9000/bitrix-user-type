@@ -28,12 +28,14 @@ use WebArch\BitrixUserPropertyType\IblockSectionLinkType;
 use WebArch\BitrixUserPropertyType\Utils\UserTypeManager;
 use WebArch\BitrixUserPropertyType\WeekDayType;
 use WebArch\BitrixUserPropertyType\StoreListType;
+use WebArch\BitrixUserPropertyType\BasketRuleType;
 
 (new UserTypeManager([
     HyperLinkType::class,
     IblockSectionLinkType::class,
     WeekDayType::class,
-    StoreListType::class
+    StoreListType::class,
+    BasketRuleType::class,
 ]))->init();
 ```
 
@@ -47,6 +49,7 @@ use WebArch\BitrixUserPropertyType\StoreListType;
 * "Привязка к разделу инфоблока(с окном поиска)". Позволяет удобно указать раздел, выбрав его из всплывающего окна. `WebArch\BitrixUserPropertyType\IblockSectionLinkType`
 * "День недели". Позволяет реализовать привязку к дню недели (ISO-8601). `WebArch\BitrixUserPropertyType\WeekDayType`
 * "Привязка к складу". Реализует привязку к складу по его XML_ID. `WebArch\BitrixUserPropertyType\StoreListType` 
+* "Привязка к правилу работы с корзиной". Реализаует привязку к правилу работы с корзиной по его ID.
 
 Как разработать свой тип свойства: 
 ----------------------------------
